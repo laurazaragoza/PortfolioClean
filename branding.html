@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  
+   <link rel="stylesheet" href="https://use.typekit.net/gda8qnk.css">
+   <link rel="stylesheet" href="https://use.typekit.net/gda8qnk.css">
+
+ 
+    <svg style="position: absolute; width: 0; height: 0;">
+  <filter id="ink-texture">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+  </filter>
+</svg>
+</head>
+</head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branding</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gda8qnk.css">
+  <svg style="position:absolute;width:0;height:0;">
+    <filter id="ink-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+    </filter>
+  </svg>
+</head>
+<body>
+    <!-- NAV DOSSIERS -->
+  <nav class="folders-nav">
+    <a class="folder-arrow prev" href="index.html#works" title="Retour aux works">
+      &larr; Works
+    </a>
+    <div class="folders-nav-center">
+      <a href="branding.html" class="folder-dot active" title="Branding">Branding</a>
+      <a href="social.html"   class="folder-dot"        title="Social Media">Social</a>
+      <a href="web.html"      class="folder-dot"        title="Web Design">Web</a>
+      <a href="print.html"    class="folder-dot"        title="Print">Print</a>
+    </div>
+    <a class="folder-arrow next" href="social.html" title="Social Media">
+      Social &rarr;
+    </a>
+  </nav>
+
+  <!-- TITRE -->
+  <section id="branding-hero">
+    <div class="title-section-branding">
+      <span class="hero-label">Graphisme</span>  
+      <h1 class="title-branding" filter="url(#ink-texture)">
+        <span class="bran">BRAN</span><span class="ding">ding</span>
+      </h1>
+      <span class="description">[L'IDENTITÉ VISUELLE QUI DONNE L'IMAGE DE MARQUE]</span>
+    </div>
+  </section>
+
+  <!-- STICKY CARDS -->
+  <div id="cards-section">
+    <!-- Chaque .card-track contient une carte sticky + son accordéon -->
+    <!-- Généré par JS -->
+  </div>
+
+  <script src="branding.js"></script>
+</body>
+</html>

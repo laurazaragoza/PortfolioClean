@@ -1,0 +1,366 @@
+/* ══════════════════════════════════════════
+   social.css — Social Media épuré, lignes fines
+   ══════════════════════════════════════════ */
+
+/* ── NAV DOSSIERS ── */
+.folders-nav {
+  position: fixed;
+  top: 1.4rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  z-index: 1000;
+}
+
+.folder-arrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  opacity: 0.45;
+  transition: opacity 0.25s;
+}
+.folder-arrow:hover { opacity: 1; }
+
+.folders-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.folder-dot {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  opacity: 0.3;
+  padding: 2px 0;
+  border-bottom: 0.8px solid transparent;
+  transition: opacity 0.25s, border-color 0.25s;
+}
+.folder-dot:hover { opacity: 0.7; }
+.folder-dot.active {
+  opacity: 1;
+  border-bottom-color: #111;
+}
+
+/* ── HERO ── */
+#social-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 0.5px solid rgba(17,17,17,0.1);
+}
+
+.hero-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.4);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: clamp(5rem, 15vw, 14rem);
+  line-height: 1;
+  color: #111;
+  filter: url(#ink-texture);
+}
+.hero-title {
+  padding-right: 0.1em;
+}
+
+.hero-bold {
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.hero-script {
+  font-family: "tangier", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-left: 0.01em;
+  transform: translateY(0.02em);
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.05em;
+  margin-top: 24px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+/* ── PROJETS ── */
+#social-projects {
+  padding-bottom: 120px;
+}
+
+/* Chaque projet = une section */
+.social-project {
+  border-bottom: 0.5px solid rgba(17,17,17,0.1);
+}
+
+/* ── EN-TÊTE PROJET ── */
+.project-header {
+  padding: 80px 8vw 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  align-items: start;
+}
+
+.project-num {
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.3);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.project-title {
+  font-family: "tangier", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.project-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.platform-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 0.5px solid rgba(17,17,17,0.3);
+  border-radius: 999px;
+  color: rgba(17,17,17,0.6);
+}
+
+/* Colonne stratégie droite */
+.project-strategy {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 8px;
+}
+
+.strategy-block {
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid rgba(17,17,17,0.08);
+}
+.strategy-block:last-child { border-bottom: none; }
+
+.strategy-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.35);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.strategy-value {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(17,17,17,0.8);
+}
+
+.strategy-value strong {
+  font-weight: 600;
+  color: #111;
+}
+
+/* ── FIL HORIZONTAL DE POSTS ── */
+.posts-scroll-area {
+  position: relative;
+  border-top: 0.5px solid rgba(17,17,17,0.08);
+}
+
+/* Label "Posts" + compteur */
+.posts-header {
+  padding: 24px 8vw 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.posts-header-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.35);
+}
+
+/* Boutons scroll gauche/droite */
+.posts-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.posts-nav-btn {
+  width: 32px;
+  height: 32px;
+  border: 0.5px solid rgba(17,17,17,0.2);
+  border-radius: 50%;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.posts-nav-btn:hover {
+  background: #111;
+  color: #f6f4ef;
+}
+
+.posts-nav-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* La piste scrollable */
+.posts-track-wrapper {
+  overflow: hidden;
+  padding: 0 8vw 50px;
+}
+
+.posts-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── CARTE POST ── */
+.post-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: default;
+}
+
+/* Carré Instagram / format selon type */
+.post-card[data-type="instagram"]  { width: 240px; }
+.post-card[data-type="story"]      { width: 140px; }
+.post-card[data-type="linkedin"]   { width: 300px; }
+.post-card[data-type="podcast"]    { width: 220px; }
+.post-card[data-type="carousel"]   { width: 240px; }
+
+.post-visual {
+  position: relative;
+  overflow: hidden;
+  background: #e8e4dc;
+  border: 0.5px solid rgba(17,17,17,0.08);
+  transition: transform 0.35s ease;
+}
+
+.post-card[data-type="instagram"] .post-visual  { aspect-ratio: 1 / 1; }
+.post-card[data-type="story"]     .post-visual  { aspect-ratio: 9 / 16; }
+.post-card[data-type="linkedin"]  .post-visual  { aspect-ratio: 1.91 / 1; }
+.post-card[data-type="podcast"]   .post-visual  { aspect-ratio: 1 / 1; }
+.post-card[data-type="carousel"]  .post-visual  { aspect-ratio: 1 / 1; }
+
+.post-card:hover .post-visual {
+  transform: translateY(-4px);
+}
+
+.post-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(8%);
+  transition: filter 0.3s;
+}
+
+.post-card:hover .post-visual img {
+  filter: grayscale(0%);
+}
+
+/* Badge type dans le coin */
+.post-type-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(246,244,239,0.9);
+  color: rgba(17,17,17,0.6);
+  padding: 3px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Placeholder sans image */
+.post-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eae6de;
+}
+
+.post-placeholder span {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.25);
+}
+
+/* Infos sous la carte */
+.post-meta {
+  padding: 10px 2px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.post-caption {
+  font-size: 0.78rem;
+  color: rgba(17,17,17,0.7);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-date {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(17,17,17,0.3);
+}
+
+/* SVG ink filter hérité */
+svg.hidden-svg { position: absolute; width: 0; height: 0; }
